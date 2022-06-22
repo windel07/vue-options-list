@@ -1,0 +1,21 @@
+{
+	"name": "vue-options-list",
+	"version": "1.0.0",
+	"description": "Vue component to handle large amount of checkbox/radio input options.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"vue"
+	],
+	"author": "Windel Oira",
+	"license": "ISC",
+	"devDependencies": {
+		"fuse.js": "^6.6.2",
+		"tailwindcss": "^3.1.4"
+	},
+	"dependencies": {
+		"lodash.debounce": "^4.0.8"
+	}
+}
