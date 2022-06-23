@@ -1,6 +1,6 @@
 {
 	"name": "vue-options-list",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Vue component to handle large amount of checkbox/radio input options.",
 	"main": "index.js",
 	"scripts": {

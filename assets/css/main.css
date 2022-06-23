@@ -594,10 +594,6 @@ video {
   margin-bottom: 1rem;
 }
 
-.tw-mb-0 {
-  margin-bottom: 0px;
-}
-
 .tw-ml-auto {
   margin-left: auto;
 }
@@ -606,12 +602,12 @@ video {
   margin-bottom: 0.25rem;
 }
 
-.tw-block {
-  display: block;
+.tw-mb-0 {
+  margin-bottom: 0px;
 }
 
-.tw-inline-block {
-  display: inline-block;
+.tw-block {
+  display: block;
 }
 
 .tw-flex {
@@ -630,14 +626,6 @@ video {
 
 .tw-min-h-\[25px\] {
   min-height: 25px;
-}
-
-.tw-w-\[24px\] {
-  width: 24px;
-}
-
-.tw-w-\[14px\] {
-  width: 14px;
 }
 
 .tw-w-\[16px\] {
@@ -683,25 +671,8 @@ video {
   border-radius: 30px;
 }
 
-.tw-border-\[30px\] {
-  border-width: 30px;
-}
-
-.tw-border-0 {
-  border-width: 0px;
-}
-
-.tw-p-3 {
-  padding: 0.75rem;
-}
-
 .tw-p-2 {
   padding: 0.5rem;
-}
-
-.tw-py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
 }
 
 .tw-py-2 {
@@ -709,25 +680,12 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.tw-px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
-
-.tw-pr-2 {
-  padding-right: 0.5rem;
+.tw-pl-\[30px\] {
+  padding-left: 30px;
 }
 
 .tw-pr-3 {
   padding-right: 0.75rem;
-}
-
-.tw-pl-\[30\[x\]\] {
-  padding-left: 30[x];
-}
-
-.tw-pl-\[30px\] {
-  padding-left: 30px;
 }
 
 .tw-text-sm {
@@ -735,21 +693,9 @@ video {
   line-height: 1.25rem;
 }
 
-.tw-text-\[\#e5e7eb\] {
-  --tw-text-opacity: 1;
-  color: rgb(229 231 235 / var(--tw-text-opacity));
-}
-
 .tw-text-\[\#adb5bd\] {
   --tw-text-opacity: 1;
   color: rgb(173 181 189 / var(--tw-text-opacity));
-}
-
-.tw-shadow-sm {
-  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-  -webkit-box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-          box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .tw-shadow-md {
@@ -759,15 +705,7 @@ video {
           box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.tw-outline-0 {
-  outline-width: 0px;
-}
-
 .focus-visible\:tw-outline-none:focus-visible {
   outline: 2px solid transparent;
   outline-offset: 2px;
-}
-
-.focus-visible\:tw-outline-0:focus-visible {
-  outline-width: 0px;
 }
