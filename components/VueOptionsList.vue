@@ -136,12 +136,6 @@ export default {
 		},
 	},
 	watch: {
-		value: {
-			deep: true,
-			handler(newValue) {
-				console.log(newValue);
-			},
-		},
 		optionsList: {
 			immediate: true,
 			handler(newValue) {
