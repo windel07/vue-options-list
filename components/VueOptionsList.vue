@@ -100,6 +100,7 @@ export default {
             let options = this.options;
             const fuse = new Fuse(options, {
                 useExtendedSearch: true,
+                keys: "object" === typeof options[0] ? ["label"] : [],
             });
 
             if (this.searchKeyword)
