@@ -47,7 +47,9 @@
                         :native-value="listItem.value || listItem"
                         class="tw-mb-1"
                     >
-                        {{ listItem.label || listItem }}
+                        <slot name="item-label" :item="listItem">
+                            {{ listItem.label || listItem }}
+                        </slot>
                     </vue-options-list-item>
                 </div>
             </div>
