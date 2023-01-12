@@ -11,7 +11,8 @@
                     >
                     <span
                         v-if="
-                            selectedItems.length < optionsList.length && selectedItems.length
+                            selectedItems.length < optionsList.length &&
+                            selectedItems.length
                         "
                         class="tw-mx-2"
                         >|</span
@@ -23,9 +24,9 @@
                         >Clear</a
                     >
                 </div>
-            </slot>
 
-            <VueOptionsListSearch v-model="searchKeyword" class="tw-ml-auto" />
+                <VueOptionsListSearch v-model="searchKeyword" class="tw-ml-auto" />
+            </slot>
         </div>
 
         <div
