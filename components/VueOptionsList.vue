@@ -1,27 +1,29 @@
 <template>
     <div>
         <div class="tw-mb-4 tw-flex tw-justify-between tw-items-center tw-text-sm">
-            <div class="tw-flex tw-items-center">
-                <a
-                    v-if="selectedItems.length < optionsList.length"
-                    @click.prevent="handleBulkSelection(optionsList)"
-                    href
-                    >Select All</a
-                >
-                <span
-                    v-if="
-                        selectedItems.length < optionsList.length && selectedItems.length
-                    "
-                    class="tw-mx-2"
-                    >|</span
-                >
-                <a
-                    v-if="selectedItems.length"
-                    @click.prevent="handleBulkSelection([])"
-                    href
-                    >Clear</a
-                >
-            </div>
+            <slot name="actions">
+                <div class="tw-flex tw-items-center">
+                    <a
+                        v-if="selectedItems.length < optionsList.length"
+                        @click.prevent="handleBulkSelection(optionsList)"
+                        href
+                        >Select All</a
+                    >
+                    <span
+                        v-if="
+                            selectedItems.length < optionsList.length && selectedItems.length
+                        "
+                        class="tw-mx-2"
+                        >|</span
+                    >
+                    <a
+                        v-if="selectedItems.length"
+                        @click.prevent="handleBulkSelection([])"
+                        href
+                        >Clear</a
+                    >
+                </div>
+            </slot>
 
             <VueOptionsListSearch v-model="searchKeyword" class="tw-ml-auto" />
         </div>
