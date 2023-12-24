@@ -116,6 +116,12 @@ export default {
             });
         },
         paginatedList() {
+            //When the combined list height is less than the scroll, then just return the whole list.
+            //This is mostly a simple workaround to prevent the optionList watcher to recalculating the scroll height from 
+            //an incomplete page. 
+            if (this.checklistHeight <= Math.floor(this.listScrollHeight)) {
+                return this.optionsList;
+            }
             const startIndex = Math.floor(this.listScrollTop / 25);
             const endIndex = startIndex + Math.floor(this.listScrollHeight / 25);
 
