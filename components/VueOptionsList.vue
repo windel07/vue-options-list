@@ -116,18 +116,25 @@ export default {
             });
         },
         paginatedList() {
-            //When the combined list height is less than the scroll, then just return the whole list.
-            //This is mostly a simple workaround to prevent the optionList watcher to recalculating the scroll height from 
-            //an incomplete page. 
+           //When the combined list height is less than the scroll, then just return the whole list.
             if (this.checklistHeight <= Math.floor(this.listScrollHeight)) {
                 return this.optionsList;
             }
             const startIndex = Math.floor(this.listScrollTop / 25);
-            const endIndex = startIndex + Math.floor(this.listScrollHeight / 25);
-
-            return this.optionsList.filter((optionItem, optionIndex) => {
+            const endIndex = startIndex + Math.round(this.listScrollHeight / 25);
+            let filteredList = this.optionsList.filter((optionItem, optionIndex) => {
                 return optionIndex >= startIndex && optionIndex <= endIndex;
-            });
+            })
+
+            //If the filtered list is less than the page length, then add previous elements
+            //as padding to prevent the scrollbar to readjust abruptly. 
+            const pageLength = Math.abs(startIndex - endIndex);
+            if (filteredList.length < pageLength) {
+                const paddingLength = Math.abs(pageLength - filteredList.length);
+                const paddingStartIndex = startIndex - paddingLength;
+                filteredList = this.optionsList.filter((_, optionIndex) => optionIndex >= paddingStartIndex && optionIndex <= endIndex);
+            }
+            return filteredList; 
         },
         checklistHeight() {
             return this.optionsList.length * 25;
